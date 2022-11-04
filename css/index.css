@@ -281,6 +281,13 @@ a{text-decoration: none; color: #000;}
         display: block;
         margin-right: 5%;
     }
+    .header .header-list .side-nav .nav-wrap i{
+        padding-bottom: 50px;
+    }
+    .header .header-list .side-nav .nav-wrap ul{
+        margin-top: 100px;
+    }
+
     .content .content-wrap{
         font-size: 25px;
     }

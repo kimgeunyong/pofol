@@ -320,6 +320,13 @@ a{text-decoration: none; color: #000; }
 }
 
 @media screen and (max-width: 900px) {
+    .header .header-list .side-nav .nav-wrap i{
+        padding-bottom: 50px;
+    }
+    .header .header-list .side-nav .nav-wrap ul{
+        margin-top: 100px;
+    }
+
     .header .header-right .header-txt,
     .content .part .part-right,
     .content .exehibition .exe-txt,
