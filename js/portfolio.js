@@ -17,15 +17,15 @@ $("document").ready(function(){
     $(".content .left .web ul").addClass("on")
     $(".content .left .web ul li").eq(0).addClass("on")
 
-    $(".content .left .web span").click(function(){
+    $(".content .left .web span").on("click touchstart",function(){
         $(".content .left .web ul").toggleClass('on')
         $(".content .left .web").toggleClass("on")
         $(".content .left .app").removeClass("on")
         $(".content .left .design").removeClass("on")
         $(".content .left .cc").removeClass("on")
-        // $(".header .header-list").css("background-color", "rgba(54,54,54,0.85)")
         $(".content .left").css("background-color", "#363636")
     })
+
     $(".content .left .web ul li").click(function(){
         let i = $(this).index()
         $(".content .left .web ul li").removeClass("on").eq(i).addClass("on")
