@@ -3,7 +3,10 @@
 *{margin: 0; padding: 0; font-family: 'Noto Sans KR';}
 ul{list-style: none;}
 a{text-decoration: none; color: #000; }
-/* body{overflow-y: hidden;} */
+body{
+    overflow-y: hidden;
+}
+
 .wrap{
     width: 100%;
     height: 100%;
@@ -14,11 +17,16 @@ a{text-decoration: none; color: #000; }
     opacity: 1;
     transition: ease-in-out 0.3s;
 }
+
+
+.header{
+    width: 100%;
+}
 .header .header-list{
     width: 100%;
     height: 100px;
-    /* background-color: rgba(54,54,54,0.85); */
     position: fixed;
+    /* background-color: rgba(54, 54, 54, 0.85); */
     z-index: 99;
 }
 .header .header-list .list-wrap{
@@ -29,17 +37,6 @@ a{text-decoration: none; color: #000; }
     justify-content: space-between;
     align-items: center;
 }
-.header .header-list .logo.on img:nth-child(1),
-.header .header-list .logo img:nth-child(2){
-    opacity: 0;
-    transition: 2s;
-}
-.header .header-list .logo img:nth-child(1),
-.header .header-list .logo.on img:nth-child(2){
-    opacity: 1;
-    transition: 2s;
-}
-
 .header .header-list .nav ul{
     width: 550px;
     display: flex;
@@ -61,8 +58,7 @@ a{text-decoration: none; color: #000; }
     transform: translate(-50%,-50%);
 }
 .header .header-list .nav ul li a{
-    /* color: #f3f4ef; */
-    color: #363636;
+    color: #343434;
 }
 .header .header-list .hamburger{
     cursor: pointer;
@@ -71,7 +67,7 @@ a{text-decoration: none; color: #000; }
 .header .header-list .hamburger .line{
     width: 28px;
     height: 1px;
-    background-color: #fff;
+    background-color: #000;
 }
 .header .header-list .hamburger .line:nth-child(2){
     margin: 8px 0;
@@ -103,47 +99,37 @@ a{text-decoration: none; color: #000; }
 .header .header-list .side-nav .nav-wrap i:hover{
     color: #fbf394;
 }
-.header .header-list .side-nav .side-logo{
-    width: 100%;
-    text-align: center;
-}
 .header .header-list .side-nav .nav-wrap ul{
-    margin-top: 120px;
+    margin-top: 150px;
     font-weight: bold;
-    display: flex;
-    flex-wrap: wrap;
-    height: 400px;
-    justify-content: space-around;
-}
-.header .header-list .side-nav .nav-wrap ul li{
-    flex-basis: 100%;
 }
 .header .header-list .side-nav .nav-wrap ul li:hover a{
     transition: 0.3s;
     color: #fbf394;
 }
-/* 헤더 리스트 끝 */
-/* 헤더 리스트 끝 */
-/* 헤더 리스트 끝 */
+.header .header-list .side-nav .nav-wrap ul li:nth-child(2){
+    margin: 80px 0;
+}
 
 .content{
     width: 100%;
     display: flex;
-    justify-content: space-between;
 }
 .content .left{
+    /* width: 710px; */
     flex-basis: 30%;
-    min-height: 100vh;
-    background-color: #1b6242;
+    /* height: 1090px; */
+    background-color: #000;
     color: #fff;
-    box-sizing: border-box;
-    /* font-size: 0.9vw; */
+    font-size: 0.9vw;
 }
 .content .left .left-wrap{
-    width: 50%;
-    margin: 0 auto;
-    padding: 248px 2% 0;
-    /* padding-top: 248px; */
+    /* margin: 248px 360px 0; */
+    /* margin: 248px 52% 0; */
+    /* margin: 42% 52% 0; */
+    padding: 0 42% 0;
+    margin-top: 248px;
+    flex-basis: 100%;
     box-sizing: border-box;
 }
 .content .left .left-wrap > div{
@@ -153,137 +139,94 @@ a{text-decoration: none; color: #000; }
 .content .left .left-wrap > div::after{
     content: "";
     position: absolute;
-    width: 20px;
-    height: 20px;
-    /* background-color: #000; */
-    border-radius: 50px;
-    border: 5px solid #fff;
-    /* top: -5%;
-    left: -15%; */
     left: -50px;
     top: -3px;
+    width: 20px;
+    height: 20px;
+    background-color: #000;
+    border-radius: 50px;
+    border: 5px solid #fff;
 }
+
 .content .left .web,
 .content .left .app,
-.content .left .design{
+.content .left .logo{
     margin-bottom: 65px;
 }
-.content .left .web.on span,
-.content .left .web ul li.on,
-.content .left .cc.on,
-.content .left .design.on,
-.content .left .app.on{
+.content .left .web.on span{
     color: #fbf394
 }
 .content .left .web ul{
     padding-top: 43px;
-    padding-left: 10%;
+    padding-left: 17px;
     display: none;
     transition: 0.5s;
 }
 .content .left .web ul.on{
     display: block;
     transition: 0.5s;
+    /* color: #fbf394; */
 }
-/* .content .left .web ul li{
+.content .left .web ul li{
     width: 130px;
-} */
+}
+.content .left .web ul li.on{
+    color: #fbf394;
+}
 .content .left .web ul li:nth-child(2){
     margin: 27px 0;
 }
-/* left 끝 */
-/* left 끝 */
-/* left 끝 */
+/* .content .left .web ul li:nth-child(4){
+    margin-top: 27px;
+} */
+
+.content .left .app.on{
+    color: #fbf394;
+}
+.content .left .logo.on{
+    color: #fbf394;
+}
+.content .left .cc.on{
+    color: #fbf394;
+}
+
+
+
+
 
 .content .right{
+    /* max-width: 1210px; */
     flex-basis: 65%;
-    /* height: 1090px; */
+    height: 1090px;
     overflow: hidden;
     display: flex;
 }
-.content .right .box{
-    flex-basis: 80%;
-    margin: 237px auto 113px;
+.content .right .landrover{
+    max-width: 1000px;
+    width: 100%;
+    /* margin: 237px 97px 0 113px; */
+    margin: 20% 10% 0 10%;
     display: flex;
-    justify-content: space-between;
     display: none;
 }
-.content .right .box.on{
+.content .right .landrover.on{
     display: block;
     display: flex;
 }
-
-/* 여기부터 개별 적용 */
-/* 여기부터 개별 적용 */
-/* 여기부터 개별 적용 */
-.content .right .landrover .txt ul:nth-child(1) li:nth-child(2){
-    color: #1b6242;
-}
-.content .right .landrover .mockup .top .button{
-    border: 1px solid #1b6242;
-}
-.content .right .landrover .mockup .top .button:hover{
-    background-color: #1b6242;
-}
-.content .right .balenciaga .txt ul:nth-child(1) li:nth-child(2){
-    color: #ad1110;
-}
-.content .right .balenciaga .mockup .top .button{
-    border: 1px solid #ad1110;
-}
-.content .right .balenciaga .mockup .top .button:hover{
-    background-color: #ad1110;
-}
-.content .right  .balenciaga .desktop::after{
-    background: url(../images/발렌시아가.png) center top no-repeat;
-    background-size: cover;
-}
-.content .right .angel .txt ul:nth-child(1) li:nth-child(2){
-    color: #767773;
-}
-.content .right .angel .mockup .top .button{
-    border: 1px solid #767773;
-}
-.content .right .angel .mockup .top .button:hover{
-    background-color: #767773;
-}
-.content .right  .angel .desktop::after{
-    background: url(../images/엔제리너스.png) center top no-repeat;
-    background-size: cover;
-}
-.content .right .r-app .txt ul:nth-child(1) li:nth-child(2){
-    color: #f74730;
-}
-.content .right .r-app .mockup .top .button{
-    border: 1px solid #f74730;
-}
-.content .right .r-app .mockup .top .button:hover{
-    background-color: #f74730;
-}
-.content .right  .r-app .desktop::after{
-    background: url(../images/앱-프로세스.png) center top no-repeat;
-    background-size: cover;
-}
-.content .right  .r-design .desktop::after{
-    background: url(../images/MVPet2.png) center top no-repeat;
-    background-size: cover;
-}
-.content .right  .clone .desktop::after{
-    background: url(../images/clone.png) center top no-repeat;
-    background-size: cover;
-}
-/* 여기까지 개별 적용 */
-/* 여기까지 개별 적용 */
-/* 여기까지 개별 적용 */
-
-.content .right .mockup .desktop{
+.content .right .landrover .mockup .desktop,
+.content .right .balenciaga .mockup .desktop,
+.content .right .angel .mockup .desktop,
+.content .right .r-app .mockup .desktop,
+.content .right .r-logo .mockup .desktop,
+.content .right .clone .mockup .desktop{
     width: 100%;
     position: relative;
 }
-.content .right img{
+.content .right .landrover .mockup .desktop img{
     width: 100%;
 }
-.content .right .desktop::after{
+
+.content .right .landrover .mockup .desktop::after{
     content: "";
     position: absolute;
     background: url(../images/랜드로버-3차.jpg) center top no-repeat;
@@ -296,38 +239,50 @@ a{text-decoration: none; color: #000; }
     border-top-right-radius: 15px;
     transition: 5s;
 }
-.content .right .mockup .bottom > div:hover::after{
+
+.content .right .landrover .mockup .bottom > div:hover::after{
     background-position: center bottom;
 }
-.content .right .txt ul:nth-child(1) li:nth-child(2){
-    color: #363636;
+
+.content .right .landrover .txt{
+    width: 360px;
+}
+.content .right .txt ul li:nth-child(2){
+    color: #fbf394;
     font-size: 40px;
     font-weight: bold;
+
 }
-.content .right .txt ul:nth-child(2){
-    margin-top: 65px;
-}
-.content .right .txt ul:nth-child(2) li:nth-child(odd){
+.content .right .txt ul li:nth-child(5){
+    margin-top: 81px;
     font-weight: bold;
 }
-.content .right .txt ul:nth-child(2) li:not(:nth-child(1)){
-    margin-top: 10px;
+.content .right .txt ul li:nth-child(7),
+.content .right .txt ul li:nth-child(9){
+    margin-top: 65px;
+    font-weight: bold;
 }
-.content .right .txt ul:nth-child(2) li:nth-child(3),
-.content .right .txt ul:nth-child(2) li:nth-child(5){
-    margin-top: 30px;
+.content .right .txt ul li:nth-child(11){
+    margin-left: 35px;
+    font-weight: bold;
+}
+.content .right .txt ul li:nth-child(6),
+.content .right .txt ul li:nth-child(8),
+.content .right .txt ul li:nth-child(10){
+    margin-top: 10px;
 }
 .content .right .mockup .top{
     display: flex;
-    /* max-width: 450px; */
-    /* margin: 0 auto; */
-    justify-content: space-around;
+    max-width: 450px;
+    margin: 0 auto;
+    justify-content: space-between;
     padding-bottom: 27px;
 }
 .content .right .mockup .top .button{
-    flex-basis: 30%;
-    /* height: 35px; */
-    border: 1px solid #363636;
+    width: 130px;
+    /* width: 100%; */
+    height: 35px;
+    border: 1px solid #fbf394;
     text-align: center;
     line-height: 35px;
     border-radius: 30px;
@@ -335,265 +290,293 @@ a{text-decoration: none; color: #000; }
     transition: 0.3s;
 }
 .content .right .mockup .top .button:hover{
-    background-color: #363636;
+    background-color: #fbf394;
+    color: #fff;
     transition: 0.3s;
 }
-.content .right .mockup .top .button:hover a{
-    color: #fff;
+
+.content .right .balenciaga{
+    width: 1000px;
+    margin: 237px 97px 0 113px;
+    display: flex;
+    display: none;
+}
+.content .right .balenciaga.on{
+    display: block;
+    display: flex;
+}
+.content .right .balenciaga .txt{
+    width: 360px;
+}
+.content .right .balenciaga .mockup .desktop img{
+    width: 100%;
+}
+.content .right .balenciaga .mockup .desktop::after{
+    content: "";
+    position: absolute;
+    background: url(../images/발렌시아가-리디자인.jpg) center top no-repeat;
+    top: 0px;
+    right: 0;
+    width: 100%;
+    height: 71%;
+    background-size: cover;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    transition: 5s;
+}
+
+.content .right .balenciaga .mockup .bottom > div:hover::after{
+    background-position: center bottom;
 }
 
 
-@media screen and (max-width:1200px) {
-    .header .header-list .nav ul{
-        display: none;
+.content .right .angel{
+    width: 1000px;
+    margin: 237px 97px 0 113px;
+    display: flex;
+    display: none;
+}
+.content .right .angel.on{
+    display: block;
+    display: flex;
+}
+.content .right .angel .txt{
+    width: 360px;
+}
+.content .right .angel .mockup .desktop img{
+    /* position: relative; */
+    width: 100%;
+}
+.content .right .angel .mockup .desktop::after{
+    content: "";
+    position: absolute;
+    background: url(../images/엔제리너스-리디자인2차.jpg) center top no-repeat;
+    top: 0px;
+    right: 0;
+    width: 100%;
+    height: 71%;
+    background-size: cover;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    transition: 5s;
+}
+.content .right .angel .mockup .bottom > div:hover::after{
+    background-position: center bottom;
+}
+
+.content .right .r-app{
+    width: 1000px;
+    margin: 237px 97px 0 113px;
+    display: flex;
+    display: none;
+}
+.content .right .r-app.on{
+    display: block;
+    display: flex;
+}
+.content .right .r-app .txt{
+    width: 360px;
+}
+.content .right .r-app .mockup .top,
+.content .right .r-logo .mockup .top{
+    justify-content: center;
+}
+.content .right .r-app .mockup .desktop img{
+    /* position: relative; */
+    width: 100%;
+}
+.content .right .r-app .mockup .desktop::after{
+    content: "";
+    position: absolute;
+    background: url(../images/앱-프로세스-3.jpg) center top no-repeat;
+    top: 0px;
+    right: 0;
+    width: 100%;
+    height: 71%;
+    background-size: cover;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    transition: 5s;
+}
+.content .right .r-app .mockup .bottom > div:hover::after{
+    background-position: center bottom;
+}
+
+.content .right .r-logo{
+    width: 1000px;
+    margin: 237px 97px 0 113px;
+    display: flex;
+    display: none;
+}
+.content .right .r-logo.on{
+    display: block;
+    display: flex;
+}
+.content .right .r-logo .txt{
+    width: 360px;
+}
+.content .right .r-logo .mockup .desktop img{
+    /* position: relative; */
+    width: 100%;
+}
+.content .right .r-logo .mockup .desktop::after{
+    content: "";
+    position: absolute;
+    background: url(../images/MVPet2-\(최종\).jpg) center top no-repeat;
+    top: 0px;
+    right: 0;
+    width: 100%;
+    height: 71%;
+    background-size: cover;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    transition: 9s;
+}
+.content .right .r-logo .mockup .bottom > div:hover::after{
+    background-position: center bottom;
+}
+
+.content .right .clone{
+    width: 1000px;
+    margin: 237px 97px 0 113px;
+    display: flex;
+    display: none;
+}
+.content .right .clone.on{
+    display: block;
+    display: flex;
+}
+.content .right .clone .txt{
+    width: 360px;
+}
+.content .right .clone .mockup .top{
+    padding: 0 100px 27px;
+}
+.content .right .clone .mockup .desktop img{
+    /* position: relative; */
+    width: 100%;
+}
+.content .right .clone .mockup .desktop::after{
+    content: "";
+    position: absolute;
+    background: url(../images/clone.png) center top no-repeat;
+    top: 0px;
+    right: 0;
+    width: 100%;
+    height: 71%;
+    background-size: cover;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    transition: 9s;
+}
+.content .right .clone .mockup .bottom > div:hover::after{
+    background-position: center bottom;
+}
+
+
+@media screen and (min-width: 641px) and (max-width: 1200px) {
+
+    .content .right .landrover,
+    .content .right .balenciaga,
+    .content .right .angel,
+    .content .right .r-app,
+    .content .right .r-logo,
+    .content .right .clone{
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0 20px;
     }
+    .content .right .landrover .mockup,
+    .content .right .balenciaga .mockup,
+    .content .right .angel .mockup,
+    .content .right .r-app .mockup,
+    .content .right .r-logo .mockup,
+    .content .right .clone .mockup{
+        padding-top: 20px;
+    }
+    .content .right .txt{
+        margin-left: -10%;
+        margin-right: 20px;
+    }
+    .content .right .txt ul{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        /* text-align: center; */
+        height: 130px;
+        margin-top: 250px;
+        width: 140%;
+        font-size: 100%;
+        justify-content: space-between;
+    }
+    .content .right .txt ul li:nth-child(5){
+        margin-top: 0px;
+    }
+    .content .right .txt ul li:nth-child(7),
+    .content .right .txt ul li:nth-child(9){
+        margin-top: 0px;
+    }
+}
+
+@media screen and (max-width: 640px) {
     .header .header-list .logo{
         margin-left: 43%;
     }
-    .header .header-list .logo.on{
-        transform: translateX(-60px);
+    .header .header-list .nav ul{
+        display: none;
     }
     .header .header-list .hamburger{
         display: block;
         margin-right: 5%;
     }
-}
 
-@media screen and (min-width: 641px) and (max-width:1200px) {
-
-    .content .left{
-        font-size: 13px;
-    }
-    
+    /* .content .left .left-wrap{
+        margin: 248px 70px;
+    } */
     .content .right .landrover,
     .content .right .balenciaga,
     .content .right .angel,
     .content .right .r-app,
-    .content .right .r-design,
+    .content .right .r-logo,
     .content .right .clone{
         flex-wrap: wrap;
-        margin-top: 150px;
-    }
-    .content .right .txt{
-        flex-basis: 100%;
-        display: flex;
-        justify-content: space-between;
-        font-size: 13px;
-    }
-    .content .right .txt ul:nth-child(2){
-        margin-top: 0;
-        display: flex;
-        flex-wrap: wrap;
-        /* text-align: center; */
-    }
-    .content .right .txt ul:nth-child(2) li:nth-child(1),
-    .content .right .txt ul:nth-child(2) li:nth-child(3){
-        flex-basis: 20%;
-        margin: 0;
-    }
-    .content .right .txt ul:nth-child(2) li:nth-child(2),
-    .content .right .txt ul:nth-child(2) li:nth-child(4){
-        flex-basis: 80%;
-        margin: 0;
+        margin: 248px 10px;
         text-align: center;
     }
-    .content .right .txt ul:nth-child(2) li:nth-child(5),
-    .content .right .txt ul:nth-child(2) li:nth-child(6),
-    .content .right .txt ul:nth-child(2) li:nth-child(7),
-    .content .right .txt ul:nth-child(2) li:nth-child(8){
-        margin: 0;
-        flex-basis: 20%;
-    }
-    .content .right .txt ul:nth-child(2) li:nth-child(7){
-        text-align: center;
-    }
-
-    .content .right .mockup{
-        margin-top: 30px;
-    }
-}
-@media screen and (max-width: 640px) {
-    .header .header-list .side-nav .nav-wrap i{
-        padding-bottom: 50px;
-    }
-
-    .header .header-list .side-nav .nav-wrap ul{
-        margin-top: 100px;
-    }
-    
-    .content{
-        flex-wrap: wrap;
-    }
-    .content .left,
-    .content .right{
-        flex-basis: 100%;
-    }
-
-    .content .left{
-        min-height: 0;
-    }
-    .content .left .left-wrap{
-        display: flex;
-        width: 90%;
-        margin: 0 auto;
-        justify-content: space-between;
-        padding-top: 150px;
-        font-size: 10px;
-    }
-    .content .left .left-wrap > div{
-        flex-basis: 20%;
-        text-align: center;
-        line-height: 30px;
-        margin-bottom: 10px;
-        /* width: 100%;
-        height: 30px;
-        border: 1px solid #fff; */
-    }
-    /* .content .left .left-wrap > div::before{
-        position: absolute;
-        content: "";
+    .content .right .landrover .txt,
+    .content .right .balenciaga .txt,
+    .content .right .angel .txt,
+    .content .right .r-app .txt,
+    .content .right .r-logo .txt,
+    .content .right .clone .txt{
         width: 100%;
-        height: 30px;
-        left: 50%;
-        transform: translateX(-50%);
-        border: 1px solid #fff;
-        
-    } */
-    .content .left .left-wrap > div::after{
-        display: none;
+        font-size: 30%;
     }
-    .content .left .web ul{
-        padding-left: 0;
+    .content .right .txt ul li:nth-child(5){
+        margin-top: 50px;
     }
-    /* .content .left .left-wrap .web{
-        flex-basis: 30%;
-    } */
-
-    .content .right .landrover,
-    .content .right .balenciaga,
-    .content .right .angel,
-    .content .right .r-app,
-    .content .right .r-design,
-    .content .right .clone{
-        flex-wrap: wrap;
-        margin-top: 30px;
+    .content .right .txt ul li:nth-child(7),
+    .content .right .txt ul li:nth-child(9){
+        margin-top: 20px;
     }
-    /* .content .right .txt{
-        flex-basis: 100%;
-        display: flex;
-        justify-content: space-between;
-        font-size: 10px;
+    .content .right .landrover .mockup,
+    .content .right .balenciaga .mockup,
+    .content .right .angel .mockup,
+    .content .right .r-app .mockup,
+    .content .right .r-logo .mockup,
+    .content .right .clone .mockup{
+        margin-top: 20px;
     }
-    .content .right .txt ul:nth-child(1){
-        flex-basis: 50%;
+    .content .right .landrover .mockup .desktop,
+    .content .right .balenciaga .mockup .desktop,
+    .content .right .angel .mockup .desktop,
+    .content .right .r-app .mockup .desktop,
+    .content .right .r-logo .mockup .desktop,
+    .content .right .clone .mockup .desktop{
+        width: 100%;
     }
-    .content .right .txt ul:nth-child(2){
-        flex-basis: 48%;
-    }
-    .content .right .txt ul:nth-child(1) li:nth-child(2){
-        font-size: 20px !important;
-    }
-    .content .right .txt ul:nth-child(2){
-        margin-top: 0;
-        display: flex;
-        flex-wrap: wrap;
-    }
-    .content .right .txt ul:nth-child(2) li:nth-child(1),
-    .content .right .txt ul:nth-child(2) li:nth-child(3){
-        flex-basis: 20%;
-        margin: 0;
-    }
-    .content .right .txt ul:nth-child(2) li:nth-child(2),
-    .content .right .txt ul:nth-child(2) li:nth-child(4){
-        flex-basis: 80%;
-        margin: 0;
-        text-align: center;
-    }
-    .content .right .txt ul:nth-child(2) li:nth-child(5),
-    .content .right .txt ul:nth-child(2) li:nth-child(6),
-    .content .right .txt ul:nth-child(2) li:nth-child(7),
-    .content .right .txt ul:nth-child(2) li:nth-child(8){
-        margin: 0;
-        flex-basis: 20%;
-    }
-    .content .right .txt ul:nth-child(2) li:nth-child(7){
-        text-align: center;
-    } */
-
-    .content .right .mockup .top .button a{
-        font-size: 10px;
-    }
-    .content .right .mockup{
-        margin-top: 30px;
-    }
-    .content .left .web ul{
-        padding-top: 10px;
-    }
-    .content .left .web ul li:nth-child(2){
-        margin: 5px 0;
-    }
-
-
-    .content .right .txt{
-        flex-basis: 100%;
-        font-size: 10px;
-        text-align: center;
-    }
-    .content .right .txt ul:nth-child(1) li:nth-child(2){
-        font-size: 20px !important;
-    }
-    /* .content .right .txt ul:nth-child(2){
-        margin-top: 0;
-        display: grid;
-        grid-template-columns: 10% 15% 5% 15%;
-        grid-template-rows: repeat(3, 1fr) ;
-    }
-    .content .right .txt ul:nth-child(2) li{
-        margin: 0 !important;
-    }
-    .content .right .txt ul:nth-child(2) li:nth-child(1){
-        grid-template: 1/2;
-    }
-    .content .right .txt ul:nth-child(2) li:nth-child(3){
-        grid-template: 1/2;
-        grid-row: 2/3;
-    }
-    .content .right .txt ul:nth-child(2) li:nth-child(5){
-        grid-template: 1/2;
-        grid-row: 3/4;
-    }
-    .content .right .txt ul:nth-child(2) li:nth-child(2){
-        grid-template: 2/5;
-    }
-    .content .right .txt ul:nth-child(2) li:nth-child(4){
-        grid-template: 2/5;
-        grid-row: 2/3;
-    }
-    .content .right .txt ul:nth-child(2) li:nth-child(6){
-        grid-template: 2/3;
-        grid-row: 3/4;
-    }
-    .content .right .txt ul:nth-child(2) li:nth-child(7){
-        grid-template: 3/4;
-        grid-row: 3/4;
-    }
-    .content .right .txt ul:nth-child(2) li:nth-child(8){
-        grid-template: 2/3;
-        grid-row: 3/4;
-    }
-    .content .right .txt ul:nth-child(2) li:nth-child(9){
-        grid-template: 4/5;
-        grid-row: 3/4;
-    } */
-    .content .right .txt ul:nth-child(2){
-        margin-top: 30px;
-        /* display: grid;
-        grid-template-columns: 10% 10% 10% 10% 10% 20% 5% 20%; */
-        display: flex;
-        gap: 3%;
-        justify-content: center;
-    }
-    .content .right .txt ul:nth-child(2) li{
-        margin: 0 !important;
+    .content .right .mockup .top .button{
+        width: 30%;
+        font-size: 0.6em;
     }
 }

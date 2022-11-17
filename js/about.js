@@ -1,22 +1,6 @@
 $("document").ready(function(){
     AOS.init()
 
-    $(window).scroll(function () {
-
-        if ($(this).scrollTop() > 100) {
-            $(".top").addClass("on");
-            $(".header .header-list").addClass("on");
-        }
-        else {
-            $(".top").removeClass("on");
-            $(".header .header-list").removeClass("on");
-        }
-    });
-
-    $(".top").click(function () {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-
     $(".wrap").addClass("on")
 
     $(".header .header-list .nav ul li").eq(0).addClass("on")
