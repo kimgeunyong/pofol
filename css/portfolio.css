@@ -261,7 +261,7 @@ a{text-decoration: none; color: #000; }
     background-color: #f74730;
 }
 .content .right  .r-app .desktop::after{
-    background: url(./images/앱-프로세스.png) center top no-repeat;
+    background: url(../images/앱-프로세스.png) center top no-repeat;
     background-size: cover;
 }
 .content .right  .r-design .desktop::after{
@@ -286,7 +286,7 @@ a{text-decoration: none; color: #000; }
 .content .right .desktop::after{
     content: "";
     position: absolute;
-    background: url(../images/랜드로버-3차.jpg) center top no-repeat;
+    background: url(images/랜드로버-3차.jpg) center top no-repeat;
     top: 0px;
     right: 0;
     width: 100%;
