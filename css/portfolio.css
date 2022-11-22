@@ -235,7 +235,7 @@ a{text-decoration: none; color: #000; }
     background-color: #ad1110;
 }
 .content .right  .balenciaga .desktop::after{
-    background: url(images/발렌시아가.png) center top no-repeat;
+    background: url(../images/발렌시아가.png) center top no-repeat;
     background-size: cover;
 }
 .content .right .angel .txt ul:nth-child(1) li:nth-child(2){
@@ -248,7 +248,7 @@ a{text-decoration: none; color: #000; }
     background-color: #767773;
 }
 .content .right  .angel .desktop::after{
-    background: url(images/엔제리너스.png) center top no-repeat;
+    background: url(../images/엔제리너스.png) center top no-repeat;
     background-size: cover;
 }
 .content .right .r-app .txt ul:nth-child(1) li:nth-child(2){
@@ -261,7 +261,7 @@ a{text-decoration: none; color: #000; }
     background-color: #f74730;
 }
 .content .right  .r-app .desktop::after{
-    background: url(images/앱-프로세스.png) center top no-repeat;
+    background: url(./images/앱-프로세스.png) center top no-repeat;
     background-size: cover;
 }
 .content .right  .r-design .desktop::after{
